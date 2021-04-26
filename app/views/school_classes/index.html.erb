@@ -1,1 +1,9 @@
-<%= @school_classes %>
+
+<!-- <%= @school_classes.each do |sc| %>
+<%= sc.title %>, <%= sc.room_number %>
+<% end %> -->
+
+<br>
+<% @school_classes.each do |school_class| %>
+<%=  link_to "#{school_class.title}, #{school_class.room_number}", school_class_path(school_class)%><br>
+<%end%>
